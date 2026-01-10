@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  username     String    @unique @db.VarChar(150)
+  password     String    @db.VarChar(255)
+  skillsOffered String   @default("") @map("skills_offered")
+  skillsNeeded  String   @default("") @map("skills_needed")
+  location     String    @default("") @db.VarChar(150)
+  bio          String    @default("")
+  avatar       String    @default("") @db.VarChar(255)
+  rating       Decimal   @default(0.0) @db.Decimal(3, 1)
+  isPremium    Boolean   @default(false) @map("is_premium")
+  lastSeen     DateTime  @default(now()) @map("last_seen") @db.Timestamp
+  isOnline     Boolean   @default(false) @map("is_online")
+  email        String?   @unique @db.VarChar(255)
+  createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamp
+
+  // Relations
+  sentMessages     Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+  reviewsGiven     Review[]  @relation("Reviewer")
+  reviewsReceived  Review[]  @relation("Reviewed")
+  favorites        Favorite[] @relation("UserFavorites")
+  favoritedBy      Favorite[] @relation("FavoriteUser")
+  blockedUsers     Block[]   @relation("Blocker")
+  blockedBy        Block[]   @relation("Blocked")
+
+  @@map("User")
+}
+
+model Message {
+  id         Int       @id @default(autoincrement())
+  senderId   Int       @map("sender_id")
+  receiverId Int       @map("receiver_id")
+  content    String    @db.Text
+  timestamp  DateTime  @default(now()) @db.Timestamp
+  isRead     Boolean   @default(false) @map("is_read")
+  isDeleted  Boolean   @default(false) @map("is_deleted")
+  isEdited   Boolean   @default(false) @map("is_edited")
+  editedAt   DateTime? @map("edited_at") @db.Timestamp
+
+  // Relations
+  sender   User @relation("SentMessages", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User @relation("ReceivedMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@index([senderId, receiverId], name: "idx_message_sender_receiver")
+  @@index([timestamp(sort: Desc)], name: "idx_message_timestamp")
+  @@index([isRead], name: "idx_message_is_read")
+  @@map("Message")
+}
+
+model Review {
+  id         Int       @id @default(autoincrement())
+  reviewerId Int       @map("reviewer_id")
+  reviewedId Int       @map("reviewed_id")
+  rating     Decimal   @db.Decimal(2, 1) // от 1 до 5
+  comment    String?   @db.VarChar(500)
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamp
+
+  // Relations
+  reviewer User @relation("Reviewer", fields: [reviewerId], references: [id], onDelete: Cascade)
+  reviewed User @relation("Reviewed", fields: [reviewedId], references: [id], onDelete: Cascade)
+
+  @@unique([reviewerId, reviewedId])
+  @@index([reviewedId], name: "idx_review_reviewed")
+  @@index([rating], name: "idx_review_rating")
+  @@map("Review")
+}
+
+model Favorite {
+  id         Int      @id @default(autoincrement())
+  userId     Int      @map("user_id")
+  favoriteId Int      @map("favorite_id")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamp
+
+  // Relations
+  user     User @relation("UserFavorites", fields: [userId], references: [id], onDelete: Cascade)
+  favorite User @relation("FavoriteUser", fields: [favoriteId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, favoriteId])
+  @@index([userId], name: "idx_favorite_user")
+  @@map("Favorite")
+}
+
+model Block {
+  id        Int      @id @default(autoincrement())
+  blockerId Int      @map("blocker_id")
+  blockedId Int      @map("blocked_id")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp
+
+  // Relations
+  blocker User @relation("Blocker", fields: [blockerId], references: [id], onDelete: Cascade)
+  blocked User @relation("Blocked", fields: [blockedId], references: [id], onDelete: Cascade)
+
+  @@unique([blockerId, blockedId])
+  @@index([blockerId], name: "idx_block_blocker")
+  @@map("Block")
+}
