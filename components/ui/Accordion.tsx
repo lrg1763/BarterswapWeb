@@ -57,12 +57,12 @@ interface AccordionProps {
   defaultOpenIndex?: number
 }
 
-export default function Accordion({ items, defaultOpenIndex = 0 }: AccordionProps) {
+export default function Accordion({ items, defaultOpenIndex }: AccordionProps) {
   // #region agent log
   fetch('http://127.0.0.1:7250/ingest/9fb6c82f-66a0-462a-b7f7-74dfc935103b',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Accordion.tsx:48',message:'Accordion component mount',data:{itemsCount:items.length,defaultOpenIndex},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
   // #endregion
 
-  const [openIndex, setOpenIndex] = useState<number | null>(defaultOpenIndex)
+  const [openIndex, setOpenIndex] = useState<number | null>(defaultOpenIndex ?? null)
 
   // #region agent log
   fetch('http://127.0.0.1:7250/ingest/9fb6c82f-66a0-462a-b7f7-74dfc935103b',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'Accordion.tsx:52',message:'State initialized',data:{openIndex},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});

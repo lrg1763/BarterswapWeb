@@ -206,11 +206,11 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             Преимущества нашей платформы
           </h2>
           
-          {/* Desktop: сетка 2x2 с разделительными линиями */}
-          <div className="hidden lg:block max-w-4xl mx-auto">
-            <div className="grid grid-cols-2">
+          {/* Таблица: на мобильных 4 ряда, на десктопе 2x2 */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 border-t-2 border-l-2 border-r-4 border-b-4 border-primary-black rounded overflow-hidden">
               {/* Блок 1: Без оплат */}
-              <div className="p-6">
+              <div className="p-6 border-b-2 md:border-r-2 md:border-b-2 border-primary-black">
                 <div className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
                   <div>
@@ -222,7 +222,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
               </div>
               
               {/* Блок 2: Быстро */}
-              <div className="p-6">
+              <div className="p-6 border-b-2 md:border-b-2 border-primary-black">
                 <div className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
                   <div>
@@ -233,11 +233,8 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 </div>
               </div>
               
-              {/* Горизонтальная линия между первым и вторым рядом */}
-              <div className="col-span-2 border-b-2 border-primary-black"></div>
-              
               {/* Блок 3: Надёжно */}
-              <div className="p-6">
+              <div className="p-6 border-b-2 md:border-b-0 md:border-r-2 border-primary-black">
                 <div className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
                   <div>
@@ -249,52 +246,6 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
               </div>
               
               {/* Блок 4: Удобно */}
-              <div className="p-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
-                  <div>
-                    <p className="text-lg font-onyx-black text-primary-black leading-tight">
-                      Чат, уведомления, избранное<br />и блокировки — всё на месте.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: вертикальная версия */}
-          <div className="lg:hidden">
-            <div className="space-y-0 border-t border-l border-r border-b border-primary-black">
-              <div className="p-6 border-b border-primary-black">
-                <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
-                  <div>
-                    <p className="text-lg font-onyx-black text-primary-black leading-tight">
-                      Обмен навыками без бюджета:<br />вы помогаете — вам помогают.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6 border-b border-primary-black">
-                <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
-                  <div>
-                    <p className="text-lg font-onyx-black text-primary-black leading-tight">
-                      Регистрация за минуту<br />и первые совпадения в тот же день.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6 border-b border-primary-black">
-                <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
-                  <div>
-                    <p className="text-lg font-onyx-black text-primary-black leading-tight">
-                      Рейтинги, отзывы и статус онлайн<br />помогают выбрать партнера.
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
                   <div className="w-4 h-4 rounded-full bg-primary-black mt-1 flex-shrink-0"></div>
@@ -361,25 +312,25 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {/* Разработка сайтов */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
+            <div className="p-6 rounded" style={{ backgroundColor: '#00FFFF' }}>
               <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-white mb-1">Разработка сайтов</h3>
-                <p className="text-sm font-onyx-regular text-primary-gray-text">Индивидуальный обмен</p>
+                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Разработка сайтов</h3>
+                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
               </div>
               <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-gray-text/20">
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                <div className="pb-4 border-b border-primary-black/20">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Предоставляю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Вёрстку HTML/CSS, адаптивный дизайн
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Получаю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Backend на Python, настройку сервера
                   </p>
                 </div>
@@ -387,25 +338,25 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Дизайн и Маркетинг */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
+            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(168, 159, 255)' }}>
               <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-white mb-1">Дизайн и Маркетинг</h3>
-                <p className="text-sm font-onyx-regular text-primary-gray-text">Индивидуальный обмен</p>
+                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Дизайн и Маркетинг</h3>
+                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
               </div>
               <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-gray-text/20">
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                <div className="pb-4 border-b border-primary-black/20">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Предоставляю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Графический дизайн, брендинг, иллюстрации
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Получаю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     SEO оптимизацию, SMM продвижение
                   </p>
                 </div>
@@ -413,25 +364,25 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Изучение языков */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
+            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(0, 254, 135)' }}>
               <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-white mb-1">Изучение языков</h3>
-                <p className="text-sm font-onyx-regular text-primary-gray-text">Индивидуальный обмен</p>
+                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Изучение языков</h3>
+                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
               </div>
               <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-gray-text/20">
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                <div className="pb-4 border-b border-primary-black/20">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Предоставляю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Уроки английского, практику разговорной речи
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Получаю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Изучение испанского, помощь с грамматикой
                   </p>
                 </div>
@@ -439,25 +390,25 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Здоровье и Фитнес */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
+            <div className="p-6 rounded" style={{ backgroundColor: '#FFD700' }}>
               <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-white mb-1">Здоровье и Фитнес</h3>
-                <p className="text-sm font-onyx-regular text-primary-gray-text">Индивидуальный обмен</p>
+                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Здоровье и Фитнес</h3>
+                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
               </div>
               <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-gray-text/20">
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                <div className="pb-4 border-b border-primary-black/20">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Предоставляю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Тренировки по йоге, консультации по питанию
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-green-light mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2">
                     Получаю:
                   </p>
-                  <p className="text-primary-white font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular">
                     Массаж, консультации психолога
                   </p>
                 </div>
@@ -669,7 +620,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
           <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
             Часто задаваемые вопросы
           </h2>
-          <Accordion items={faqItems} defaultOpenIndex={0} />
+          <Accordion items={faqItems} defaultOpenIndex={undefined} />
         </div>
       </section>
 
