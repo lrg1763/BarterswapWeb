@@ -312,25 +312,34 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {/* Разработка сайтов */}
-            <div className="p-6 rounded" style={{ backgroundColor: '#00FFFF' }}>
-              <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Разработка сайтов</h3>
-                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
+            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(253, 129, 228)' }}>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
+                  <Code className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Разработка сайтов</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                    Индивидуальный обмен
+                  </span>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-black/20">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+              <div className="space-y-5">
+                <div className="pb-4 border-b-2 border-primary-black/30">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Вёрстку HTML/CSS, адаптивный дизайн
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Backend на Python, настройку сервера
                   </p>
                 </div>
@@ -338,25 +347,34 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Дизайн и Маркетинг */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(168, 159, 255)' }}>
-              <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Дизайн и Маркетинг</h3>
-                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
+            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(168, 159, 255)' }}>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
+                  <Palette className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Дизайн и Маркетинг</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                    Индивидуальный обмен
+                  </span>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-black/20">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+              <div className="space-y-5">
+                <div className="pb-4 border-b-2 border-primary-black/30">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Графический дизайн, брендинг, иллюстрации
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     SEO оптимизацию, SMM продвижение
                   </p>
                 </div>
@@ -364,25 +382,34 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Изучение языков */}
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(0, 254, 135)' }}>
-              <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Изучение языков</h3>
-                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
+            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(0, 254, 135)' }}>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Изучение языков</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                    Индивидуальный обмен
+                  </span>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-black/20">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+              <div className="space-y-5">
+                <div className="pb-4 border-b-2 border-primary-black/30">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Уроки английского, практику разговорной речи
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Изучение испанского, помощь с грамматикой
                   </p>
                 </div>
@@ -390,25 +417,34 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
 
             {/* Здоровье и Фитнес */}
-            <div className="p-6 rounded" style={{ backgroundColor: '#FFD700' }}>
-              <div className="mb-6">
-                <h3 className="text-xl font-onyx-black text-primary-black mb-1">Здоровье и Фитнес</h3>
-                <p className="text-sm font-onyx-regular text-primary-black">Индивидуальный обмен</p>
+            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(255, 138, 75)' }}>
+              <div className="mb-6 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
+                  <Heart className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Здоровье и Фитнес</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                    Индивидуальный обмен
+                  </span>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-primary-black/20">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+              <div className="space-y-5">
+                <div className="pb-4 border-b-2 border-primary-black/30">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Тренировки по йоге, консультации по питанию
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2">
+                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                    <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular">
+                  <p className="text-primary-black font-onyx-regular ml-6">
                     Массаж, консультации психолога
                   </p>
                 </div>
