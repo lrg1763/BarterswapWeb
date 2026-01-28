@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:socket": "node socket-server/index.js",
-    "dev:full": "./start-full.sh",
-    "start:full": "./start-full.sh",
+    "dev:full": "./start.sh",
+    "start:full": "./start.sh",
     "stop": "./stop.sh",
     "build": "next build",
     "start": "next start",

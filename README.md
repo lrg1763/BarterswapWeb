@@ -68,7 +68,7 @@ npm run db:migrate
 ### 5. Запуск
 ```bash
 # Автоматический запуск (рекомендуется)
-./start-full.sh
+./start.sh
 # или
 npm run dev:full
 
