@@ -81,7 +81,7 @@ export default function Sidebar({ unreadCount = 0 }: SidebarProps) {
           {/* Logo */}
           <div className="p-6 border-b-2 border-primary-gray-medium">
             <h1 className="text-2xl font-onyx-black text-primary-black">
-              SkillSwap
+              Barterswap
             </h1>
           </div>
 

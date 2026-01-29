@@ -26,7 +26,7 @@ export default function LoginPageClient() {
       )}
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-onyx-black mb-2">SkillSwap</h1>
+          <h1 className="text-4xl md:text-5xl font-onyx-black mb-2">Barterswap</h1>
           <h2 className="text-2xl md:text-3xl font-onyx-black mb-4">Вход</h2>
           <p className="text-primary-gray-text font-onyx-regular">
             Войдите в свой аккаунт

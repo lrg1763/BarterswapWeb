@@ -154,6 +154,6 @@ export default async function SubscriptionPage() {
 }
 
 export const metadata = {
-  title: 'Подписка - SkillSwap',
-  description: 'Премиум подписка SkillSwap',
+  title: 'Подписка - Barterswap',
+  description: 'Премиум подписка Barterswap',
 }

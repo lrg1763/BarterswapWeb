@@ -6,12 +6,12 @@ const swaggerConfig = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'SkillSwap API',
+      title: 'Barterswap API',
       version: '1.0.0',
-      description: 'API для платформы обмена навыками SkillSwap',
+      description: 'API для платформы обмена навыками Barterswap',
       contact: {
-        name: 'SkillSwap Support',
-        email: 'support@skillswap.com',
+        name: 'Barterswap Support',
+        email: 'support@barterswap.com',
       },
     },
     servers: [

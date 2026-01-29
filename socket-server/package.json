@@ -1,7 +1,7 @@
 {
-  "name": "skillswap-socket-server",
+  "name": "barterswap-socket-server",
   "version": "1.0.0",
-  "description": "Socket.IO server for SkillSwap",
+  "description": "Socket.IO server for Barterswap",
   "main": "index.js",
   "type": "module",
   "scripts": {

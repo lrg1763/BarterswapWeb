@@ -220,13 +220,13 @@ export async function generateMetadata({
 }: {
   params: { userId: string }
 }): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://skillswap.com'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://barterswap.com'
   
   try {
     const userId = parseInt(params.userId)
     if (isNaN(userId)) {
       return {
-        title: 'Профиль пользователя - SkillSwap',
+        title: 'Профиль пользователя - Barterswap',
         description: 'Просмотр профиля пользователя',
       }
     }
@@ -245,13 +245,13 @@ export async function generateMetadata({
 
     if (!user) {
       return {
-        title: 'Профиль пользователя - SkillSwap',
+        title: 'Профиль пользователя - Barterswap',
         description: 'Просмотр профиля пользователя',
       }
     }
 
-    const title = `Профиль ${user.username} - SkillSwap`
-    const description = user.bio || `Профиль пользователя ${user.username} на платформе SkillSwap`
+    const title = `Профиль ${user.username} - Barterswap`
+    const description = user.bio || `Профиль пользователя ${user.username} на платформе Barterswap`
     const image = user.avatar ? `${baseUrl}${user.avatar}` : undefined
 
     return {
@@ -261,7 +261,7 @@ export async function generateMetadata({
         title,
         description,
         url: `${baseUrl}/match/${userId}`,
-        siteName: 'SkillSwap',
+        siteName: 'Barterswap',
         locale: 'ru_RU',
         type: 'profile',
         images: image ? [{ url: image }] : undefined,
@@ -275,7 +275,7 @@ export async function generateMetadata({
     }
   } catch (error) {
     return {
-      title: 'Профиль пользователя - SkillSwap',
+      title: 'Профиль пользователя - Barterswap',
       description: 'Просмотр профиля пользователя',
     }
   }

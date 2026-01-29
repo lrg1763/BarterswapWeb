@@ -1,14 +1,14 @@
 import RegisterForm from '@/components/forms/RegisterForm'
 import type { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://skillswap.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://barterswap.com'
 
 export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-primary-white flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-onyx-black mb-2">SkillSwap</h1>
+          <h1 className="text-4xl md:text-5xl font-onyx-black mb-2">Barterswap</h1>
           <h2 className="text-2xl md:text-3xl font-onyx-black mb-4">
             Регистрация
           </h2>
@@ -23,19 +23,19 @@ export default function RegisterPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'Регистрация - SkillSwap',
-  description: 'Зарегистрируйтесь на платформе SkillSwap',
+  title: 'Регистрация - Barterswap',
+  description: 'Зарегистрируйтесь на платформе Barterswap',
   openGraph: {
-    title: 'Регистрация - SkillSwap',
-    description: 'Зарегистрируйтесь на платформе SkillSwap',
+    title: 'Регистрация - Barterswap',
+    description: 'Зарегистрируйтесь на платформе Barterswap',
     url: `${baseUrl}/register`,
-    siteName: 'SkillSwap',
+    siteName: 'Barterswap',
     locale: 'ru_RU',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Регистрация - SkillSwap',
-    description: 'Зарегистрируйтесь на платформе SkillSwap',
+    title: 'Регистрация - Barterswap',
+    description: 'Зарегистрируйтесь на платформе Barterswap',
   },
 }

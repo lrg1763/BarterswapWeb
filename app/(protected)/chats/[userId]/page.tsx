@@ -208,6 +208,6 @@ export default async function ChatPage({
 }
 
 export const metadata = {
-  title: 'Чат - SkillSwap',
+  title: 'Чат - Barterswap',
   description: 'Общение с пользователем',
 }

@@ -10,7 +10,7 @@ export default function DevelopersPage() {
           <h1 className="text-4xl md:text-5xl font-onyx-black">О разработчиках</h1>
         </div>
         <p className="text-primary-gray-text font-onyx-regular text-lg">
-          SkillSwap - платформа для обмена навыками и услугами
+          Barterswap - платформа для обмена навыками и услугами
         </p>
       </div>
 
@@ -19,7 +19,7 @@ export default function DevelopersPage() {
         <div className="p-6 border-2 border-primary-gray-medium rounded-lg bg-primary-white">
           <h2 className="text-2xl font-onyx-black mb-4">О проекте</h2>
           <p className="text-primary-gray-text font-onyx-regular mb-4">
-            SkillSwap - это современная платформа, созданная для людей, которые хотят
+            Barterswap - это современная платформа, созданная для людей, которые хотят
             обмениваться знаниями и навыками без использования денег. Мы верим, что
             каждый человек может научить чему-то ценному и научиться чему-то новому.
           </p>
@@ -65,7 +65,7 @@ export default function DevelopersPage() {
             <h2 className="text-2xl font-onyx-black">Поддержать проект</h2>
           </div>
           <p className="text-primary-gray-text font-onyx-regular mb-6">
-            Если вам нравится SkillSwap и вы хотите поддержать развитие платформы,
+            Если вам нравится Barterswap и вы хотите поддержать развитие платформы,
             вы можете:
           </p>
           <div className="space-y-3">
@@ -88,10 +88,10 @@ export default function DevelopersPage() {
               <span className="font-onyx-regular">
                 Написать отзыв или предложение на{' '}
                 <a
-                  href="mailto:support@skillswap.com"
+                  href="mailto:support@barterswap.com"
                   className="text-primary-black font-onyx-black hover:underline"
                 >
-                  support@skillswap.com
+                  support@barterswap.com
                 </a>
               </span>
             </div>
@@ -107,10 +107,10 @@ export default function DevelopersPage() {
         {/* Версия */}
         <div className="text-center p-6 border-2 border-primary-gray-medium rounded-lg bg-primary-white">
           <p className="text-primary-gray-text font-onyx-regular">
-            SkillSwap v1.0.0
+            Barterswap v1.0.0
           </p>
           <p className="text-primary-gray-text font-onyx-regular text-sm mt-2">
-            © 2024 SkillSwap. Все права защищены.
+            © 2024 Barterswap. Все права защищены.
           </p>
         </div>
       </div>
@@ -119,6 +119,6 @@ export default function DevelopersPage() {
 }
 
 export const metadata = {
-  title: 'О разработчиках - SkillSwap',
-  description: 'Информация о проекте SkillSwap и разработчиках',
+  title: 'О разработчиках - Barterswap',
+  description: 'Информация о проекте Barterswap и разработчиках',
 }

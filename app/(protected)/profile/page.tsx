@@ -91,6 +91,6 @@ async function ProfilePageContent() {
 }
 
 export const metadata = {
-  title: 'Профиль - SkillSwap',
-  description: 'Ваш профиль на SkillSwap',
+  title: 'Профиль - Barterswap',
+  description: 'Ваш профиль на Barterswap',
 }

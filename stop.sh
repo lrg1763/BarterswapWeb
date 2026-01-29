@@ -6,7 +6,7 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-echo -e "${YELLOW}Остановка проекта SkillSwap...${NC}\n"
+echo -e "${YELLOW}Остановка проекта Barterswap...${NC}\n"
 
 # Остановка Next.js сервера
 echo -e "${YELLOW}Остановка Next.js сервера (порт 3000)...${NC}"

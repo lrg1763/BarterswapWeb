@@ -1,4 +1,4 @@
-# SkillSwap
+# Barterswap
 
 Платформа для peer-to-peer обмена навыками и услугами без использования денег. Современное веб-приложение с реальным временем для связи между пользователями.
 
@@ -44,14 +44,14 @@ brew install postgresql@15 && brew services start postgresql@15
 
 # Создание БД
 psql postgres
-CREATE DATABASE skillswap;
+CREATE DATABASE barterswap;
 \q
 ```
 
 ### 3. Настройка переменных окружения
 Создайте `.env.local`:
 ```env
-DATABASE_URL="postgresql://user:password@localhost:5432/skillswap?schema=public"
+DATABASE_URL="postgresql://user:password@localhost:5432/barterswap?schema=public"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="your-secret-key-here-min-32-chars"  # openssl rand -base64 32
 NEXT_PUBLIC_SOCKET_SERVER_URL="http://localhost:3001"

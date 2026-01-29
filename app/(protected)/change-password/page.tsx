@@ -30,6 +30,6 @@ export default async function ChangePasswordPage() {
 }
 
 export const metadata = {
-  title: 'Смена пароля - SkillSwap',
+  title: 'Смена пароля - Barterswap',
   description: 'Измените пароль вашего аккаунта',
 }

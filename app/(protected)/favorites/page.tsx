@@ -44,6 +44,6 @@ export default async function FavoritesPage() {
 }
 
 export const metadata = {
-  title: 'Избранное - SkillSwap',
+  title: 'Избранное - Barterswap',
   description: 'Ваши избранные пользователи',
 }

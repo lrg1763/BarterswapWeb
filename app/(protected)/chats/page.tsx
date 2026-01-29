@@ -119,6 +119,6 @@ export default async function ChatsPage() {
 }
 
 export const metadata = {
-  title: 'Чаты - SkillSwap',
+  title: 'Чаты - Barterswap',
   description: 'Ваши сообщения',
 }

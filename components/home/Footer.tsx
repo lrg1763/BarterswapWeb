@@ -60,10 +60,10 @@ export default function Footer() {
             <p className="text-lg font-onyx-regular text-white">
               Сотрудничество:{' '}
               <a
-                href="mailto:info@skillswap.com"
+                href="mailto:info@barterswap.com"
                 className="text-white hover:opacity-80 transition-opacity font-onyx-regular"
               >
-                info@skillswap.com
+                info@barterswap.com
               </a>
             </p>
           </div>
@@ -73,10 +73,10 @@ export default function Footer() {
             <p className="text-lg font-onyx-regular text-white">
               Поддержка:{' '}
               <a
-                href="mailto:support@skillswap.com"
+                href="mailto:support@barterswap.com"
                 className="text-white hover:opacity-80 transition-opacity font-onyx-regular"
               >
-                support@skillswap.com
+                support@barterswap.com
               </a>
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function Footer() {
           {/* VK */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
             <a
-              href="https://vk.com/skillswap"
+              href="https://vk.com/barterswap"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
@@ -96,7 +96,7 @@ export default function Footer() {
           {/* YouTube */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
             <a
-              href="https://youtube.com/@skillswap"
+              href="https://youtube.com/@barterswap"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
@@ -109,7 +109,7 @@ export default function Footer() {
           {/* Telegram */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
             <a
-              href="https://t.me/skillswap"
+              href="https://t.me/barterswap"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
@@ -135,7 +135,7 @@ export default function Footer() {
         {/* Bottom: Legal Links */}
         <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 pt-6 border-t-2 border-primary-gray-medium">
           <span className="text-sm font-onyx-regular text-primary-gray-medium">
-            © 2026 SkillSwap
+            © 2026 Barterswap
           </span>
           <a
             href="#"

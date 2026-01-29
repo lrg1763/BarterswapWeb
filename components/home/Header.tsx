@@ -34,7 +34,7 @@ export default function Header() {
             href="/"
             className="text-xl md:text-2xl lg:text-3xl font-onyx-black text-primary-black hover:opacity-80 transition-opacity"
           >
-            SkillSwap
+            Barterswap
           </Link>
 
             {/* Navigation - по центру (скрыто на мобильных) */}

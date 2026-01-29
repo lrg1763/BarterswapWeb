@@ -38,7 +38,7 @@ trap cleanup SIGINT SIGTERM
 
 echo -e "${GREEN}"
 echo "╔════════════════════════════════════════════════════╗"
-echo "║         SkillSwap - Полный запуск проекта          ║"
+echo "║         Barterswap - Полный запуск проекта         ║"
 echo "╚════════════════════════════════════════════════════╝"
 echo -e "${NC}\n"
 
@@ -53,9 +53,9 @@ if [ ! -f .env.local ]; then
     warning "Создайте файл .env.local со следующим содержимым:"
     echo ""
     cat << 'EOF'
-DATABASE_URL="postgresql://username:password@localhost:5432/skillswap?schema=public"
+DATABASE_URL="postgresql://username:password@localhost:5432/barterswap?schema=public"
 NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="skillswap-development-secret-key-change-in-production-2024"
+NEXTAUTH_SECRET="barterswap-development-secret-key-change-in-production-2024"
 NEXT_PUBLIC_SOCKET_SERVER_URL="http://localhost:3001"
 SOCKET_PORT=3001
 NODE_ENV="development"

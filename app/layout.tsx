@@ -21,7 +21,7 @@ const onyxSemiMonoBlack = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'SkillSwap - Обмен навыками',
+  title: 'Barterswap - Обмен навыками',
   description: 'Платформа для peer-to-peer обмена навыками и услугами',
   icons: {
     icon: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   appleWebApp: {
     capable: true,
-    title: 'SkillSwap',
+    title: 'Barterswap',
     statusBarStyle: 'default',
   },
 }

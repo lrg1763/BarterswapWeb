@@ -3,23 +3,23 @@ import LoginPageClient from './LoginPageClient'
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://skillswap.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://barterswap.com'
 
 export const metadata: Metadata = {
-  title: 'Вход - SkillSwap',
-  description: 'Войдите в свой аккаунт SkillSwap',
+  title: 'Вход - Barterswap',
+  description: 'Войдите в свой аккаунт Barterswap',
   openGraph: {
-    title: 'Вход - SkillSwap',
-    description: 'Войдите в свой аккаунт SkillSwap',
+    title: 'Вход - Barterswap',
+    description: 'Войдите в свой аккаунт Barterswap',
     url: `${baseUrl}/login`,
-    siteName: 'SkillSwap',
+    siteName: 'Barterswap',
     locale: 'ru_RU',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Вход - SkillSwap',
-    description: 'Войдите в свой аккаунт SkillSwap',
+    title: 'Вход - Barterswap',
+    description: 'Войдите в свой аккаунт Barterswap',
   },
 }
 
