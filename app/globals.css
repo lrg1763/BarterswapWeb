@@ -7,6 +7,10 @@
   --font-onyx-black: 'Onyx SemiMono Black', monospace;
 }
 
+.font-logo {
+  font-family: var(--font-pressura), 'GT Pressura Pro Trial', sans-serif;
+}
+
 @layer base {
   * {
     border-color: #E5E5E5;

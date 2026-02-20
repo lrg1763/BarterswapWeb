@@ -1,4 +1,3 @@
-import { auth } from '@/lib/auth'
 import HomePageClient from '@/components/home/HomePageClient'
 import type { Metadata } from 'next'
 
@@ -22,9 +21,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Home() {
-  const session = await auth()
-  const isAuthenticated = !!session?.user
-
-  return <HomePageClient isAuthenticated={isAuthenticated} />
+export default function Home() {
+  return <HomePageClient />
 }

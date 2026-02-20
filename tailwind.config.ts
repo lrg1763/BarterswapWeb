@@ -24,6 +24,7 @@ const config: Config = {
       fontFamily: {
         'onyx-regular': ['var(--font-onyx-regular)', 'monospace'],
         'onyx-black': ['var(--font-onyx-black)', 'monospace'],
+        'pressura': ['var(--font-pressura)', 'GT Pressura Pro Trial', 'sans-serif'],
         mono: ['var(--font-onyx-regular)', 'monospace'],
       },
       fontWeight: {

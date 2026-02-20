@@ -54,7 +54,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
-              "connect-src 'self' http://localhost:3001 https://*.sentry.io",
+              "connect-src 'self'",
               "frame-ancestors 'none'",
             ].join('; '),
           },

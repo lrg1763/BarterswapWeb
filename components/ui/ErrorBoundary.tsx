@@ -24,21 +24,9 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Логирование ошибки
-    if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_SENTRY_DSN) {
-      try {
-        const Sentry = require('@sentry/nextjs')
-        Sentry.captureException(error, {
-          contexts: {
-            react: {
-              componentStack: errorInfo.componentStack,
-            },
-          },
-        })
-      } catch (e) {
-        // Sentry не настроен - игнорируем
-      }
+  componentDidCatch(error: Error, _errorInfo: React.ErrorInfo) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught:', error)
     }
   }
 

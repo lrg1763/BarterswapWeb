@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import SessionProvider from '@/components/providers/SessionProvider'
-import QueryProvider from '@/components/providers/QueryProvider'
 import { Toaster } from 'sonner'
 import { ErrorBoundary } from '@/components/ui/ErrorBoundary'
 
@@ -17,6 +15,13 @@ const onyxSemiMonoBlack = localFont({
   src: '../public/fonts/OnyxSemiMono-Black.otf',
   variable: '--font-onyx-black',
   weight: '900',
+  display: 'swap',
+})
+
+// Логотип: GT Pressura Pro Trial
+const gtPressuraProTrial = localFont({
+  src: '../public/fonts/GT-Pressura-Pro-Trial-Regular.otf',
+  variable: '--font-pressura',
   display: 'swap',
 })
 
@@ -52,15 +57,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${onyxSemiMonoRegular.variable} ${onyxSemiMonoBlack.variable} font-onyx-regular antialiased`}
+        className={`${onyxSemiMonoRegular.variable} ${onyxSemiMonoBlack.variable} ${gtPressuraProTrial.variable} font-onyx-regular antialiased`}
       >
         <ErrorBoundary>
-          <SessionProvider>
-            <QueryProvider>
-              {children}
-              <Toaster position="top-right" />
-            </QueryProvider>
-          </SessionProvider>
+          {children}
+          <Toaster position="top-right" />
         </ErrorBoundary>
       </body>
     </html>

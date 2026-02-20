@@ -6,11 +6,7 @@ import { Star, Sparkles, Shield, ShieldCheck, ShieldAlert, Zap, UserPlus, Search
 import Header from './Header'
 import Footer from './Footer'
 
-interface HomePageClientProps {
-  isAuthenticated: boolean
-}
-
-export default function HomePageClient({ isAuthenticated }: HomePageClientProps) {
+export default function HomePageClient() {
   const faqItems = [
     {
       question: 'Что такое Barterswap?',
@@ -66,12 +62,13 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
 
   return (
     <main className="min-h-screen bg-primary-white">
-      {!isAuthenticated && <Header />}
+      <Header />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-40 md:pt-40 pb-16 md:pb-24 relative">
         <div className="max-w-4xl mx-auto text-center relative">
           {/* SVG стрелка - только на десктопе */}
           <div className="hidden lg:block absolute right-4 top-28 xl:right-8">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/title-arrow-lg.svg"
               alt=""
@@ -82,52 +79,14 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-onyx-black mb-6">
             Бартерный обмен —<br />удобно и легко!
           </h1>
-          {!isAuthenticated && (
-            <p className="text-lg md:text-xl text-primary-gray-text mb-8 max-w-2xl mx-auto">
-              Barterswap — это инновационная платформа для бартерного обмена навыками и услугами. Предлагайте свои умения, находите нужных специалистов и обменивайтесь опытом без денег!
-            </p>
-          )}
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
-            {isAuthenticated ? (
-              <>
-                <Link
-                  href="/search"
-                  className="px-8 py-4 bg-primary-black text-primary-white font-onyx-black rounded hover:opacity-90 transition-opacity text-lg"
-                >
-                  Найти обмен
-                </Link>
-                <Link
-                  href="/profile"
-                  className="px-8 py-4 border-2 border-primary-black text-primary-black font-onyx-black rounded hover:bg-primary-gray-light transition-colors text-lg"
-                >
-                  Мой профиль
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link
-                  href="/login"
-                  className="px-5 py-3 border border-primary-black text-primary-black font-onyx-regular rounded bg-primary-white hover:bg-primary-gray-light transition-colors text-lg w-48 text-center mx-auto sm:mx-0"
-                >
-                  Вход
-                </Link>
-                <Link
-                  href="/register"
-                  className="px-5 py-3 bg-primary-black text-primary-white font-onyx-regular rounded hover:opacity-90 transition-opacity text-lg w-48 text-center mx-auto sm:mx-0"
-                >
-                  Регистрация
-                </Link>
-              </>
-            )}
-          </div>
+          <p className="text-lg md:text-xl text-primary-gray-text mb-24 max-w-2xl mx-auto">
+            Barterswap — это инновационная платформа для бартерного обмена навыками и услугами. Предлагайте свои умения, находите нужных специалистов и обменивайтесь опытом без денег!
+          </p>
         </div>
       </section>
 
-      {/* Features Grid - только для неавторизованных */}
-      {!isAuthenticated && (
-        <section id="features" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      {/* Features Grid */}
+      <section id="features" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
               Как пользоваться платформой
@@ -196,7 +155,6 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
             </div>
           </div>
         </section>
-      )}
 
       {/* Advantages Section */}
       <section id="advantages" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
@@ -468,7 +426,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "Нашла носителя языка за день. Удобно, что отзывы и рейтинг сразу видны."
+                &quot;Нашла носителя языка за день. Удобно, что отзывы и рейтинг сразу видны.&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Мария, студентка</p>
             </div>
@@ -479,7 +437,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "Обменял настройку CRM на брендбук. Сервис экономит время и деньги."
+                &quot;Обменял настройку CRM на брендбук. Сервис экономит время и деньги.&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Алексей, предприниматель</p>
             </div>
@@ -490,7 +448,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "За неделю освоила монтаж, партнер получил советы по питанию. Честный обмен."
+                &quot;За неделю освоила монтаж, партнер получил советы по питанию. Честный обмен.&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Елена, нутрициолог</p>
             </div>
@@ -501,8 +459,8 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "Поменялся навыками с фотографом: я научил его работать с графикой, он дал мне уроки
-                по съемке. Взаимовыгодно!"
+                &quot;Поменялся навыками с фотографом: я научил его работать с графикой, он дал мне уроки
+                по съемке. Взаимовыгодно!&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Дмитрий, графический дизайнер</p>
             </div>
@@ -513,8 +471,8 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "Отличная платформа для начинающих! Получил консультации по маркетингу в обмен на
-                помощь с настройкой сайта. Все быстро и профессионально."
+                &quot;Отличная платформа для начинающих! Получил консультации по маркетингу в обмен на
+                помощь с настройкой сайта. Все быстро и профессионально.&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Сергей, веб-разработчик</p>
             </div>
@@ -525,7 +483,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
                 ))}
               </div>
               <p className="text-primary-white font-onyx-regular mb-4">
-                "Быстро нашел партнера для обмена навыками программирования. Платформа простая и удобная, рекомендую!"
+                &quot;Быстро нашел партнера для обмена навыками программирования. Платформа простая и удобная, рекомендую!&quot;
               </p>
               <p className="text-sm font-onyx-black text-primary-white">Игорь, разработчик</p>
             </div>
@@ -661,7 +619,7 @@ export default function HomePageClient({ isAuthenticated }: HomePageClientProps)
       </section>
 
       {/* Footer */}
-      {!isAuthenticated && <Footer />}
+      <Footer />
     </main>
   )
 }

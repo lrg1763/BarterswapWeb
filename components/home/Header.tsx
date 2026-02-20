@@ -32,7 +32,7 @@ export default function Header() {
           {/* Logo - слева */}
           <Link
             href="/"
-            className="text-xl md:text-2xl lg:text-3xl font-onyx-black text-primary-black hover:opacity-80 transition-opacity"
+            className="font-pressura text-xl md:text-2xl lg:text-3xl font-bold text-primary-black hover:opacity-80 transition-opacity"
           >
             Barterswap
           </Link>
@@ -49,22 +49,6 @@ export default function Header() {
                 </button>
               ))}
             </nav>
-
-            {/* Auth buttons - справа (скрыто на мобильных) */}
-            <div className="hidden lg:flex items-center gap-4 -mr-8">
-              <Link
-                href="/login"
-                className="px-5 py-3 border border-primary-black text-primary-black font-onyx-regular rounded bg-primary-white hover:bg-primary-gray-light transition-colors text-sm w-32 text-center"
-              >
-                Вход
-              </Link>
-              <Link
-                href="/register"
-                className="px-5 py-3 bg-primary-black text-primary-white font-onyx-regular rounded hover:opacity-90 transition-opacity text-sm w-32 text-center"
-              >
-                Регистрация
-              </Link>
-            </div>
 
             {/* Mobile menu button */}
             <button
@@ -113,23 +97,6 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
-              </div>
-              {/* Auth buttons в мобильном меню */}
-              <div className="flex flex-col gap-4 pt-8 border-t-2 border-primary-gray-medium items-center">
-                <Link
-                  href="/login"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-5 py-3 border border-primary-black text-primary-black font-onyx-regular rounded bg-primary-white hover:bg-primary-gray-light transition-colors text-lg text-center w-full max-w-xs"
-                >
-                  Вход
-                </Link>
-                <Link
-                  href="/register"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-5 py-3 bg-primary-black text-primary-white font-onyx-regular rounded hover:opacity-90 transition-opacity text-lg text-center w-full max-w-xs"
-                >
-                  Регистрация
-                </Link>
               </div>
             </div>
           </nav>
