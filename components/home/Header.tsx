@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { NAV_ITEMS, AUTH_LINKS } from '@/lib/site-config'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -14,14 +15,6 @@ export default function Header() {
       setIsMobileMenuOpen(false)
     }
   }
-
-  const navItems = [
-    { id: 'features', label: 'Инструкция' },
-    { id: 'advantages', label: 'Преимущества' },
-    { id: 'examples', label: 'Примеры' },
-    { id: 'technologies', label: 'Технологии' },
-    { id: 'faq', label: 'FAQ' },
-  ]
 
   return (
     <>
@@ -38,7 +31,7 @@ export default function Header() {
 
             {/* Navigation - по центру (скрыто на мобильных) */}
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -48,6 +41,22 @@ export default function Header() {
                 </button>
               ))}
             </nav>
+
+            {/* Кнопки Регистрация / Войти - справа (скрыто на мобильных) */}
+            <div className="hidden lg:flex items-center gap-3">
+              <Link
+                href={AUTH_LINKS.register}
+                className="px-4 py-2 rounded text-sm font-onyx-black bg-primary-black text-primary-white hover:opacity-90 transition-opacity border-2 border-primary-black whitespace-nowrap"
+              >
+                Регистрация
+              </Link>
+              <Link
+                href={AUTH_LINKS.login}
+                className="px-4 py-2 rounded text-sm font-onyx-black bg-primary-white text-primary-black border-2 border-primary-black hover:bg-primary-gray-light transition-colors whitespace-nowrap"
+              >
+                Войти
+              </Link>
+            </div>
 
             {/* Mobile menu button */}
             <button
@@ -87,7 +96,7 @@ export default function Header() {
                 </button>
               </div>
               <div className="flex flex-col gap-6 flex-1">
-                {navItems.map((item) => (
+                {NAV_ITEMS.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
@@ -96,6 +105,23 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
+              </div>
+              {/* Кнопки в мобильном меню */}
+              <div className="flex flex-col gap-4 pt-4 border-t-2 border-primary-gray-medium">
+                <Link
+                  href={AUTH_LINKS.register}
+                  className="block w-full text-center py-4 rounded text-lg font-onyx-black bg-primary-black text-primary-white hover:opacity-90 transition-opacity border-2 border-primary-black"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Регистрация
+                </Link>
+                <Link
+                  href={AUTH_LINKS.login}
+                  className="block w-full text-center py-4 rounded text-lg font-onyx-black bg-primary-white text-primary-black border-2 border-primary-black hover:bg-primary-gray-light transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Войти
+                </Link>
               </div>
             </div>
           </nav>

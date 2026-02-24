@@ -25,7 +25,11 @@ const onyxSemiMonoBlack = localFont({
   display: 'swap',
 })
 
+const isGhPages = process.env.GITHUB_PAGES === '1'
+const baseUrl = isGhPages ? 'https://lrg1763.github.io/BarterswapWeb' : undefined
+
 export const metadata: Metadata = {
+  metadataBase: baseUrl ? new URL(baseUrl) : undefined,
   title: 'Barterswap - Обмен навыками',
   description: 'Платформа для peer-to-peer обмена навыками и услугами',
   icons: {

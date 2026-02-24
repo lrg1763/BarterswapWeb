@@ -1,10 +1,15 @@
 'use client'
 
+/**
+ * Welcome-страница (лендинг) Barterswap: герой, блоки о платформе, FAQ.
+ */
+
 import Link from 'next/link'
 import Accordion from '@/components/ui/Accordion'
-import { Star, Sparkles, Shield, ShieldCheck, ShieldAlert, Zap, UserPlus, Search, MessageCircle, Code, Palette, Languages, Heart, ArrowRight, ArrowLeft, Database, Lock, Loader, FileCode, Globe, Key } from 'lucide-react'
+import { Star, UserPlus, Search, MessageCircle, Code, Palette, Heart, ArrowRight, ArrowLeft, Database, Lock, Loader, Globe, Key } from 'lucide-react'
 import Header from './Header'
 import Footer from './Footer'
+import { AUTH_LINKS } from '@/lib/site-config'
 
 export default function HomePageClient() {
   const faqItems = [
@@ -79,9 +84,23 @@ export default function HomePageClient() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-onyx-black mb-6">
             Бартерный обмен —<br />удобно и легко!
           </h1>
-          <p className="text-lg md:text-xl text-primary-gray-text mb-24 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-gray-text mb-8 max-w-2xl mx-auto">
             Barterswap — это инновационная платформа для бартерного обмена навыками и услугами. Предлагайте свои умения, находите нужных специалистов и обменивайтесь опытом без денег!
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-24">
+            <Link
+              href={AUTH_LINKS.register}
+              className="inline-block px-6 py-3 rounded font-onyx-black text-lg bg-primary-black text-primary-white hover:opacity-90 transition-opacity border-2 border-primary-black"
+            >
+              Регистрация
+            </Link>
+            <Link
+              href={AUTH_LINKS.login}
+              className="inline-block px-6 py-3 rounded font-onyx-black text-lg bg-primary-white text-primary-black border-2 border-primary-black hover:bg-primary-gray-light transition-colors"
+            >
+              Войти
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -277,9 +296,6 @@ export default function HomePageClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-onyx-black text-primary-white mb-1">Разработка сайтов</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
-                    Индивидуальный обмен
-                  </span>
                 </div>
               </div>
               <div className="space-y-5">
@@ -312,9 +328,6 @@ export default function HomePageClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-onyx-black text-primary-white mb-1">Дизайн и Маркетинг</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
-                    Индивидуальный обмен
-                  </span>
                 </div>
               </div>
               <div className="space-y-5">
@@ -347,9 +360,6 @@ export default function HomePageClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-onyx-black text-primary-white mb-1">Изучение языков</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
-                    Индивидуальный обмен
-                  </span>
                 </div>
               </div>
               <div className="space-y-5">
@@ -382,9 +392,6 @@ export default function HomePageClient() {
                 </div>
                 <div>
                   <h3 className="text-xl font-onyx-black text-primary-white mb-1">Здоровье и Фитнес</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
-                    Индивидуальный обмен
-                  </span>
                 </div>
               </div>
               <div className="space-y-5">

@@ -1,5 +1,7 @@
 'use client'
 
+import { NAV_ITEMS } from '@/lib/site-config'
+
 // YouTube Icon Component
 const YouTubeIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -15,13 +17,6 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 )
 
 export default function Footer() {
-  const navItems = [
-    { id: 'features', label: 'Инструкция' },
-    { id: 'advantages', label: 'Преимущества' },
-    { id: 'examples', label: 'Примеры' },
-    { id: 'technologies', label: 'Технологии' },
-    { id: 'faq', label: 'FAQ' },
-  ]
 
   return (
     <footer className="text-primary-white" style={{ backgroundColor: '#111111' }}>
@@ -29,7 +24,7 @@ export default function Footer() {
         {/* Navigation Links - Vertical */}
         <div className="mb-12 md:mb-14">
           <nav className="flex flex-col items-center gap-4 md:gap-6">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <span
                 key={item.id}
                 className="text-2xl md:text-3xl lg:text-4xl font-onyx-black text-primary-white cursor-default"
