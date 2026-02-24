@@ -62,19 +62,6 @@ npm run build
 
 ---
 
-## Деплой на GitHub Pages
-
-Проект настроен на публикацию на GitHub Pages через GitHub Actions.
-
-1. Залейте репозиторий на GitHub.
-2. В репозитории: **Settings → Pages → Build and deployment** выберите **Source: GitHub Actions**.
-3. При пуше в ветку `main` workflow соберёт сайт и задеплоит его.
-
-Сайт доступен по адресу: **[https://lrg1763.github.io/BarterswapWeb/](https://lrg1763.github.io/BarterswapWeb/)**
-
-Если имя репозитория другое — в `next.config.js` замените `BarterswapWeb` в `basePath` и `assetPrefix` на имя вашего репозитория.
-
----
 
 ## Структура проекта
 
@@ -85,8 +72,3 @@ npm run build
 - `public/` — статические файлы (шрифты, иконки, favicon)
 - Конфигурация: `next.config.js`, `tailwind.config.ts`, `tsconfig.json`
 
----
-
-## Лицензия
-
-Учебный проект. Использование — на усмотрение автора.
