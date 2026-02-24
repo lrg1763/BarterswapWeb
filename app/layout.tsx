@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { Manrope } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'sonner'
 import { ErrorBoundary } from '@/components/ui/ErrorBoundary'
+
+const manrope = Manrope({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
 
 const onyxSemiMonoRegular = localFont({
   src: '../public/fonts/OnyxSemiMono-Regular.otf',
@@ -15,13 +22,6 @@ const onyxSemiMonoBlack = localFont({
   src: '../public/fonts/OnyxSemiMono-Black.otf',
   variable: '--font-onyx-black',
   weight: '900',
-  display: 'swap',
-})
-
-// Логотип: GT Pressura Pro Trial
-const gtPressuraProTrial = localFont({
-  src: '../public/fonts/GT-Pressura-Pro-Trial-Regular.otf',
-  variable: '--font-pressura',
   display: 'swap',
 })
 
@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${onyxSemiMonoRegular.variable} ${onyxSemiMonoBlack.variable} ${gtPressuraProTrial.variable} font-onyx-regular antialiased`}
+        className={`${manrope.variable} ${onyxSemiMonoRegular.variable} ${onyxSemiMonoBlack.variable} font-onyx-regular antialiased`}
       >
         <ErrorBoundary>
           {children}

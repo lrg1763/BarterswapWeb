@@ -1,7 +1,5 @@
 'use client'
 
-import Link from 'next/link'
-
 // YouTube Icon Component
 const YouTubeIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -17,38 +15,27 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 )
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   const navItems = [
     { id: 'features', label: 'Инструкция' },
     { id: 'advantages', label: 'Преимущества' },
     { id: 'examples', label: 'Примеры' },
-    { id: 'reviews', label: 'Отзывы' },
     { id: 'technologies', label: 'Технологии' },
     { id: 'faq', label: 'FAQ' },
   ]
 
   return (
-    <footer className="text-primary-white border-t-2 border-primary-gray-medium" style={{ backgroundColor: '#111111' }}>
+    <footer className="text-primary-white" style={{ backgroundColor: '#111111' }}>
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Navigation Links - Vertical */}
         <div className="mb-12 md:mb-14">
           <nav className="flex flex-col items-center gap-4 md:gap-6">
             {navItems.map((item) => (
-              <button
+              <span
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-2xl md:text-3xl lg:text-4xl font-onyx-black text-primary-white hover:opacity-70 transition-opacity"
+                className="text-2xl md:text-3xl lg:text-4xl font-onyx-black text-primary-white cursor-default"
               >
                 {item.label}
-              </button>
+              </span>
             ))}
           </nav>
         </div>
@@ -59,12 +46,9 @@ export default function Footer() {
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
             <p className="text-lg font-onyx-regular text-white">
               Сотрудничество:{' '}
-              <a
-                href="mailto:info@barterswap.com"
-                className="text-white hover:opacity-80 transition-opacity font-onyx-regular"
-              >
+              <span className="text-white font-onyx-regular cursor-default">
                 info@barterswap.com
-              </a>
+              </span>
             </p>
           </div>
 
@@ -72,99 +56,53 @@ export default function Footer() {
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
             <p className="text-lg font-onyx-regular text-white">
               Поддержка:{' '}
-              <a
-                href="mailto:support@barterswap.com"
-                className="text-white hover:opacity-80 transition-opacity font-onyx-regular"
-              >
+              <span className="text-white font-onyx-regular cursor-default">
                 support@barterswap.com
-              </a>
+              </span>
             </p>
           </div>
 
           {/* VK */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
-            <a
-              href="https://vk.com/barterswap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
-            >
+            <span className="text-lg font-onyx-regular text-white cursor-default">
               VK
-            </a>
+            </span>
           </div>
 
           {/* YouTube */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
-            <a
-              href="https://youtube.com/@barterswap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
-            >
+            <span className="flex items-center gap-2 text-lg font-onyx-regular text-white cursor-default">
               <YouTubeIcon className="w-6 h-6 flex-shrink-0" />
               <span>YouTube</span>
-            </a>
+            </span>
           </div>
 
           {/* Telegram */}
           <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
-            <a
-              href="https://t.me/barterswap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity"
-            >
+            <span className="flex items-center gap-2 text-lg font-onyx-regular text-white cursor-default">
               <TelegramIcon className="w-6 h-6 flex-shrink-0" />
               <span>Telegram</span>
-            </a>
-          </div>
-
-          {/* Language Switcher */}
-          <div className="px-6 py-3 rounded" style={{ backgroundColor: 'rgb(41, 41, 41)' }}>
-            <button
-              className="flex items-center gap-2 text-lg font-onyx-regular text-white hover:opacity-80 transition-opacity cursor-pointer"
-              onClick={(e) => e.preventDefault()}
-            >
-              <span>RU</span>
-              <span className="text-primary-gray-medium">/</span>
-              <span className="opacity-60">EN</span>
-            </button>
+            </span>
           </div>
         </div>
 
         {/* Bottom: Legal Links */}
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 pt-6 border-t-2 border-primary-gray-medium">
+        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 pt-6">
           <span className="text-sm font-onyx-regular text-primary-gray-medium">
             © 2026 Barterswap
           </span>
-          <a
-            href="#"
-            className="text-sm font-onyx-regular text-primary-gray-medium hover:text-primary-white transition-colors"
-            onClick={(e) => e.preventDefault()}
-          >
+          <span className="text-sm font-onyx-regular text-primary-gray-medium cursor-default">
             Документация и информация о стоимости ПО
-          </a>
-          <a
-            href="#"
-            className="text-sm font-onyx-regular text-primary-gray-medium hover:text-primary-white transition-colors"
-            onClick={(e) => e.preventDefault()}
-          >
+          </span>
+          <span className="text-sm font-onyx-regular text-primary-gray-medium cursor-default">
             Правила использования сервиса
-          </a>
-          <a
-            href="#"
-            className="text-sm font-onyx-regular text-primary-gray-medium hover:text-primary-white transition-colors"
-            onClick={(e) => e.preventDefault()}
-          >
+          </span>
+          <span className="text-sm font-onyx-regular text-primary-gray-medium cursor-default">
             Политика конфиденциальности
-          </a>
-          <a
-            href="#"
-            className="text-sm font-onyx-regular text-primary-gray-medium hover:text-primary-white transition-colors"
-            onClick={(e) => e.preventDefault()}
-          >
+          </span>
+          <span className="text-sm font-onyx-regular text-primary-gray-medium cursor-default">
             О компании
-          </a>
+          </span>
         </div>
       </div>
     </footer>

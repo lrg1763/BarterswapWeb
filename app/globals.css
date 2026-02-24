@@ -5,10 +5,11 @@
 :root {
   --font-onyx-regular: 'Onyx SemiMono Regular', monospace;
   --font-onyx-black: 'Onyx SemiMono Black', monospace;
+  --font-manrope: 'Manrope', sans-serif;
 }
 
 .font-logo {
-  font-family: var(--font-pressura), 'GT Pressura Pro Trial', sans-serif;
+  font-family: var(--font-manrope), sans-serif;
 }
 
 @layer base {
@@ -23,7 +24,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-onyx-black), monospace;
+    font-family: var(--font-manrope), sans-serif;
   }
 
   h1 {

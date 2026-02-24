@@ -70,7 +70,7 @@ npm run build
 2. В репозитории: **Settings → Pages → Build and deployment** выберите **Source: GitHub Actions**.
 3. При пуше в ветку `main` workflow соберёт сайт и задеплоит его.
 
-Сайт будет доступен по адресу: `https://<ваш-username>.github.io/BarterswapWeb/`
+Сайт доступен по адресу: **[https://lrg1763.github.io/BarterswapWeb/](https://lrg1763.github.io/BarterswapWeb/)**
 
 Если имя репозитория другое — в `next.config.js` замените `BarterswapWeb` в `basePath` и `assetPrefix` на имя вашего репозитория.
 

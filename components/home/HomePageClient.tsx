@@ -86,7 +86,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      <section id="features" className="container mx-auto px-4 py-16 scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
               Как пользоваться платформой
@@ -157,7 +157,7 @@ export default function HomePageClient() {
         </section>
 
       {/* Advantages Section */}
-      <section id="advantages" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      <section id="advantages" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           {/* Заголовок по центру */}
           <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-primary-black text-center">
@@ -220,7 +220,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Examples Section */}
-      <section id="examples" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      <section id="examples" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="max-w-6xl mx-auto relative">
           <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center text-primary-black">
             Примеры сценариев обмена
@@ -270,34 +270,34 @@ export default function HomePageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {/* Разработка сайтов */}
-            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(253, 129, 228)' }}>
+            <div className="p-8 rounded text-primary-white" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
               <div className="mb-6 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
-                  <Code className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-primary-white flex items-center justify-center">
+                  <Code className="h-6 w-6 text-primary-black" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Разработка сайтов</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                  <h3 className="text-xl font-onyx-black text-primary-white mb-1">Разработка сайтов</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
                     Индивидуальный обмен
                   </span>
                 </div>
               </div>
               <div className="space-y-5">
-                <div className="pb-4 border-b-2 border-primary-black/30">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                <div className="pb-4 border-b-2 border-primary-white/30">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Вёрстку HTML/CSS, адаптивный дизайн
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Backend на Python, настройку сервера
                   </p>
                 </div>
@@ -305,34 +305,34 @@ export default function HomePageClient() {
             </div>
 
             {/* Дизайн и Маркетинг */}
-            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(168, 159, 255)' }}>
+            <div className="p-8 rounded text-primary-white" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
               <div className="mb-6 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
-                  <Palette className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-primary-white flex items-center justify-center">
+                  <Palette className="h-6 w-6 text-primary-black" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Дизайн и Маркетинг</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                  <h3 className="text-xl font-onyx-black text-primary-white mb-1">Дизайн и Маркетинг</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
                     Индивидуальный обмен
                   </span>
                 </div>
               </div>
               <div className="space-y-5">
-                <div className="pb-4 border-b-2 border-primary-black/30">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                <div className="pb-4 border-b-2 border-primary-white/30">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Графический дизайн, брендинг, иллюстрации
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     SEO оптимизацию, SMM продвижение
                   </p>
                 </div>
@@ -340,34 +340,34 @@ export default function HomePageClient() {
             </div>
 
             {/* Изучение языков */}
-            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(0, 254, 135)' }}>
+            <div className="p-8 rounded text-primary-white" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
               <div className="mb-6 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-primary-white flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-primary-black" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Изучение языков</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                  <h3 className="text-xl font-onyx-black text-primary-white mb-1">Изучение языков</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
                     Индивидуальный обмен
                   </span>
                 </div>
               </div>
               <div className="space-y-5">
-                <div className="pb-4 border-b-2 border-primary-black/30">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                <div className="pb-4 border-b-2 border-primary-white/30">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Уроки английского, практику разговорной речи
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Изучение испанского, помощь с грамматикой
                   </p>
                 </div>
@@ -375,34 +375,34 @@ export default function HomePageClient() {
             </div>
 
             {/* Здоровье и Фитнес */}
-            <div className="p-8 rounded" style={{ backgroundColor: 'rgb(255, 138, 75)' }}>
+            <div className="p-8 rounded text-primary-white" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
               <div className="mb-6 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary-black flex items-center justify-center">
-                  <Heart className="h-6 w-6 text-primary-white" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-primary-white flex items-center justify-center">
+                  <Heart className="h-6 w-6 text-primary-black" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-onyx-black text-primary-black mb-1">Здоровье и Фитнес</h3>
-                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-black/10 text-primary-black rounded-sm">
+                  <h3 className="text-xl font-onyx-black text-primary-white mb-1">Здоровье и Фитнес</h3>
+                  <span className="inline-block px-2 py-1 text-xs font-onyx-regular bg-primary-white/10 text-primary-white rounded-sm">
                     Индивидуальный обмен
                   </span>
                 </div>
               </div>
               <div className="space-y-5">
-                <div className="pb-4 border-b-2 border-primary-black/30">
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                <div className="pb-4 border-b-2 border-primary-white/30">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowRight className="h-4 w-4" />
                     Предоставляю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Тренировки по йоге, консультации по питанию
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-onyx-black text-primary-black mb-2 flex items-center gap-2">
+                  <p className="text-sm font-onyx-black text-primary-white mb-2 flex items-center gap-2">
                     <ArrowLeft className="h-4 w-4" />
                     Получаю:
                   </p>
-                  <p className="text-primary-black font-onyx-regular ml-6">
+                  <p className="text-primary-white/90 font-onyx-regular ml-6">
                     Массаж, консультации психолога
                   </p>
                 </div>
@@ -412,87 +412,8 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reviews" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
-            Отзывы пользователей
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;Нашла носителя языка за день. Удобно, что отзывы и рейтинг сразу видны.&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Мария, студентка</p>
-            </div>
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;Обменял настройку CRM на брендбук. Сервис экономит время и деньги.&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Алексей, предприниматель</p>
-            </div>
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;За неделю освоила монтаж, партнер получил советы по питанию. Честный обмен.&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Елена, нутрициолог</p>
-            </div>
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;Поменялся навыками с фотографом: я научил его работать с графикой, он дал мне уроки
-                по съемке. Взаимовыгодно!&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Дмитрий, графический дизайнер</p>
-            </div>
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;Отличная платформа для начинающих! Получил консультации по маркетингу в обмен на
-                помощь с настройкой сайта. Все быстро и профессионально.&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Сергей, веб-разработчик</p>
-            </div>
-            <div className="p-6 rounded" style={{ backgroundColor: 'rgb(30, 30, 30)' }}>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-green-light text-primary-green-light" />
-                ))}
-              </div>
-              <p className="text-primary-white font-onyx-regular mb-4">
-                &quot;Быстро нашел партнера для обмена навыками программирования. Платформа простая и удобная, рекомендую!&quot;
-              </p>
-              <p className="text-sm font-onyx-black text-primary-white">Игорь, разработчик</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Technologies Section */}
-      <section id="technologies" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      <section id="technologies" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
             Инновационные технологии платформы
@@ -609,7 +530,7 @@ export default function HomePageClient() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="container mx-auto px-4 py-16 border-t-2 border-primary-gray-medium scroll-mt-24">
+      <section id="faq" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-onyx-black mb-12 text-center">
             Часто задаваемые вопросы

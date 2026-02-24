@@ -19,7 +19,6 @@ export default function Header() {
     { id: 'features', label: 'Инструкция' },
     { id: 'advantages', label: 'Преимущества' },
     { id: 'examples', label: 'Примеры' },
-    { id: 'reviews', label: 'Отзывы' },
     { id: 'technologies', label: 'Технологии' },
     { id: 'faq', label: 'FAQ' },
   ]
@@ -32,7 +31,7 @@ export default function Header() {
           {/* Logo - слева */}
           <Link
             href="/"
-            className="font-pressura text-xl md:text-2xl lg:text-3xl font-bold text-primary-black hover:opacity-80 transition-opacity"
+            className="font-logo text-xl md:text-2xl lg:text-3xl font-bold text-primary-black hover:opacity-80 transition-opacity"
           >
             Barterswap
           </Link>
